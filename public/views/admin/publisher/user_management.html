@@ -1,0 +1,86 @@
+<!-- begin #content -->
+		<div id="content" class="content" ng-controller="AdminPublisherController" ng-init="onGetPublishers()">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="dashboard.html">Home</a></li>
+				<li class="active">Publisher Management</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header custom_color">Publisher Management <!-- <small>header small text goes here...</small> --></h1>
+			<!-- end page-header -->
+			<!-- begin table -->
+           <hr/>
+			
+			<!-- <a href="add_user_form.html"><button type="button" class="custom_button" text="Add">Add</button></a><a href="add_user_form.html"><button type="button" class="custom_button" text="Add">Add</button></a> -->
+			<!--table begins-->
+				   
+		<!--end table-->
+		
+		
+		<!-- begin row -->
+			<div class="row" >
+			    <!-- begin col-12 -->
+			    <div class="col-md-12">
+			        <!-- begin panel -->
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                
+                            </div>
+                            <h4 class="panel-title">Publisher Details</h4>
+                        </div>
+						
+                        <div class="panel-body">
+						<div class="row"><a href="/publisher/add"><button type="button" class="btn btn-warning publisher_add_button">Add Publisher</button></a></div>
+                            <table id="data-table" class="table table-striped table-bordered">
+                                 <thead>
+                                    <tr>
+                                        <th width="100px" nowrap>Actions</th>
+										<th width="100px" nowrap>Organization Id</th>
+										<th width="100px" nowrap>Event Code</th>
+										<th width="100px" nowrap>Payment Status</th>
+                                        <th width="200px" nowrap>Organization Name</th>
+                                        <th width="200px" nowrap>Person In Charge</th>
+                                        <th width="200px" nowrap>Contract Type</th>
+                                        <th width="200px" nowrap>Contact Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="publisher in publishers">
+                                    <tr class="odd gradeX">
+                                      <td><a href="" ng-click="onSetUserId('detail',publisher._id)"><i class="fa fa-eye margin_right" aria-hidden="true"></i></a>
+                                      <a href="" ng-click="onSetUserId('edit',publisher._id)""><i class="fa fa-pencil margin_right" aria-hidden="true"></i></a>
+                                      <a href="" ng-click="onRemoveUser(publisher._id)" id="alert"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+										<td>{{publisher._id|limitTo:6}}</td>
+										<td>{{publisher.eventcode}}</td>
+										<td>{{publisher.paymentstatus}}</td>
+										<td>{{publisher.organization}}</td>
+                                        <td>{{publisher.incharge}}</td>
+                                        <td>{{publisher.contractype}}</td>
+                                        <td>{{publisher.contact}}</td>
+                                    </tr>
+                                   
+                                   
+                                </tbody> 
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end col-12 -->
+            </div>
+            <!-- end row -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+		<!-- end #content -->

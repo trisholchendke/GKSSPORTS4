@@ -1,0 +1,57 @@
+
+		
+		<!-- begin #content -->
+		<div id="content" class="content" ng-controller="OnSiteUserController" ng-init="onGetUploadedVideo()">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="dashboard.html">Home</a></li>
+				<li class="active">Dashboard</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header custom_color">Uploaded Videos <!-- <small>header small text goes here...</small> --></h1>
+			<!-- end page-header -->
+			  <hr/>
+		
+			<!--panel for recently added videos starts-->
+			<div class="panel panel-inverse clearfix" data-sortable-id="table-basic-5">
+			<div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                               
+                            </div>
+                            <h4 class="panel-title">Uploaded Videos</h4>
+                        </div>
+			<!--Recently Added Videos-->
+			<div class="row" >
+			
+			<div id="gallery1" class="gallery" ng-repeat="user in userVideo">
+                <div class="image gallery-group-1 pull-left video_size" >
+                    <div class="image-inner">
+                        
+						 <video width="300" height="195" class="responsive" controls ng-model="user.onsite_video" >							
+							<source ng-src="{{user.onsite_video}}" type="video/mp4" >
+							<source ng-src="{{user.onsite_video}}" type="video/flv" >
+							
+						 </video>
+                      
+                    </div>
+					<div id="video-view">
+					</div>
+                    <div class="image-info">
+                        <h5 class="title" ng-model="user.onsite_title">{{user.onsite_title}}</h5>
+                        <div class="pull-right">                          
+                        </div>                        
+                        <div class="desc" ng-model="user.onsite_desciption">{{user.onsite_desciption}}</div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+			</div>
+		<!-- end #content -->
+		</div>
+		<!-- end #content -->
+		
+		
+		

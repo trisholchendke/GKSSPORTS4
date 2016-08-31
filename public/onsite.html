@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="GSKOnsite">
+<!--<![endif]-->
+<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>GKS-USER MANAGEMENT</title>
+<base href="/">
+
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+
+<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="../../../../fonts.googleapis.com/cssff98.css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="/assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/css/style.min.css" rel="stylesheet" />
+	<link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+	<link href="assets/css/bootstrap_datatable_custom.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/sweetalert2/4.0.15/sweetalert2.min.css" rel="stylesheet"/>
+	<link href="https://cdn.jsdelivr.net/sweetalert2/4.0.15/sweetalert2.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="assets/css/custom_style.css" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<link href="assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+   	
+	<!-- Anguler JS -->
+
+<script src="./assets/js/angular.min.js"></script>
+<script src="./assets/js/angular-resource.min.js"></script>
+<script src="./assets/js/angular-animate.min.js"></script>
+<script src="./assets/js/ngProgress.min.js"></script>
+<script src="./assets/js/toaster.js"></script>
+<script src="../app/onsite.js"></script>
+<script src="../controller/onsite/onsite.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+	
+<!-- end Angular JS -->
+	
+			
+	</head>
+
+
+<body >    		
+    		<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"  >
+		<span class="spinner"></span>
+	</div>
+	<!-- end #page-loader -->
+	<!-- begin #page-container -->
+	<div id="page-container"
+		class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #header -->
+		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+			<!-- begin container-fluid -->
+
+			<!-- end container-fluid -->
+		</div>
+		<!-- end #header -->
+
+		<!-- begin #sidebar -->
+		<div id="sidebar" class="sidebar">
+			<!-- begin sidebar scrollbar -->
+
+			<!-- end sidebar scrollbar -->
+		</div>
+		<div class="sidebar-bg"></div>
+		<!-- end #sidebar -->
+
+		<!-- begin #content -->
+		<div ng-view></div>
+		
+       <!-- end #content -->
+
+
+								<!-- begin scroll to top btn -->
+								<a href="javascript:;"
+									class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade"
+									data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+								<!-- end scroll to top btn -->
+								</div>
+								<!-- end page container -->
+
+
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/sweetalert2/4.0.15/sweetalert2.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/sweetalert2/4.0.15/sweetalert2.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/crossbrowserjs/respond.min.js"></script>
+		<script src="assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="assets/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+	<script
+		src="assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+	<script
+		src="assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="assets/js/table-manage-default.demo.min.js"></script>
+	<script src="assets/plugins/parsley/dist/parsley.js"></script>
+	<script src="assets/js/apps.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+
+
+	<script>
+		$(function() {
+			App.init();
+			
+		});
+	</script>
+    <script>
+		$(function() {
+			$("#EventCode").hide();
+		});
+		
+		
+		 $(function(){
+         $("#role").change(function(){
+         if($(this).val() == "OnSite")
+         $("#EventCode").show();
+         else
+            $("#EventCode").hide();
+      });
+      });
+	</script>
+<script>
+$(function(){
+	  $("#header").load("/views/headerfooter/header.html"); 
+	  $("#sidebar").load("/views/headerfooter/onsitesliderbar.html"); 
+	});
+</script>
+
+	<script>
+		$(function() {
+			App.init();
+			TableManageDefault.init();
+		});
+	</script>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'../../../../www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-53034621-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End  -->
+	
+	
+	<script src="http://localhost:8989/socket.io/socket.io.js"></script>
+		<script >
+			
+		var app = angular.module('GSKOnsite');
+
+		app.directive('customOnChange',function(){
+			return{
+				restrict:'A',
+				link:function(scope,element,attrs){
+					var changefun=scope.$eval(attrs.customOnChange);
+					element.bind('change',changefun);
+				}
+			};
+		});
+		app.controller('OnUploadVideoController',function($rootScope,$scope,APIServices,$location,$window){
+			
+			//$rootScope.token=$window.sessionStorage.token;
+			// Adding New Video
+			$scope.onAddNewVideo=function(){
+							
+				$scope.user.onsite_user=$window.sessionStorage.token;
+				$scope.user.onsite_datetime=new Date().toGMTString().slice(0, -4);
+				$scope.user.onsite_document="";
+				console.log($scope.user);
+
+				APIServices.addUser("/api/onsite/",$scope.user).success(function (response) {
+		      		
+			    	   var obj=response._id;
+			       	 if(obj.length>0){
+			       		
+			       		   $location.path('/user');
+			       		
+			               }else{
+			             	  $scope.error ="Sorry,Please try again !!!";
+			               }
+			      	 
+
+			       }).error(function(){
+			    	   
+			    	   $scope.error='Sorry,Please try again !!!';
+
+				});
+
+				 
+			};
+			
+			
+			
+			 var SelectedFile;
+             var lFileSize;
+			$scope.onVideoFileChosen=function() {
+
+				SelectedFile= event.target.files[0];
+				lFileSize=event.target.files[0].size
+				console.log("NwFile : "+event.target.files[0].size);
+
+		    };
+		
+			 var socket = io.connect('http://localhost:8989');
+			var FReader;
+			var Name;
+			$scope.StartUpload=function (){
+				if(SelectedFile != "")
+				{
+					FReader = new FileReader();
+					Name = SelectedFile.name;
+					//var ds = (new Date()).toISOString().replace(/[^0-9]/g, "");
+					FReader.onload = function(evnt){
+						socket.emit('Upload', { 'Name' : Name, Data : evnt.target.result });
+					}
+					socket.emit('Start', { 'Name' : Name, 'Size' : SelectedFile.size });
+				}
+				else
+				{
+					alert("Please Select A File");
+				}
+			}
+			
+			socket.on('MoreData', function (data){
+				UpdateBar(data['Percent']);
+				var Place = data['Place'] * 524288; //The Next Blocks Starting Position
+				var NewFile; //The Variable that will hold the new Block of Data
+				if(SelectedFile.webkitSlice) 
+					NewFile = SelectedFile.webkitSlice(Place, Place + Math.min(524288, (SelectedFile.size-Place)));
+				else
+					NewFile = SelectedFile.slice(Place, Place + Math.min(524288, (SelectedFile.size-Place)));
+				console.log("NwFile : "+SelectedFile.size);
+				FReader.readAsBinaryString(NewFile);
+			});
+			function UpdateBar(percent){
+				document.getElementById('pro').setAttribute('value',  (Math.round(percent*100)/100));
+			}
+			
+			var Path = "http://localhost:8080/";
+			
+			   socket.on('Done', function (data){
+				   $scope.user.onsite_video=data['Image'].replace("public", "..");
+				   $scope.onAddNewVideo();
+				
+			});
+			
+		});
+			
+			
+		</script>	
+		
+	
+   
+</body>
+</html>

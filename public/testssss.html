@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="assets/css/sweetalert.css">
+</head>
+<body>
+<a href="#" onclick="JSconfirm()">Redirect me to home page</a>
+
+<script type="text/javascript">
+function JSconfirm(){
+	swal({ 
+    title: "Redirect to main page!",   
+    text: "Redirect me to home page?",   
+    type: "warning",   
+    showCancelButton: true,   
+    confirmButtonColor: "#DD6B55",   
+    confirmButtonText: "Yes",   
+    cancelButtonText: "No",   
+    closeOnConfirm: false,   
+    closeOnCancel: false }, 
+    function(isConfirm){   
+        if (isConfirm) 
+    {   
+        window.location = "http://www.jquery-az.com/";   
+        } 
+        else {     
+            swal("You are not redirected!", "success");   
+            } });
+}
+</script>
+</body>
+</html>
+

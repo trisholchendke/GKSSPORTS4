@@ -1,0 +1,119 @@
+
+
+		<!-- begin #content -->
+		<div id="content" class="content" ng-controller="AdminAddNewUserController" ng-init="onGetUser()">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="dashboard.html">User Management</a></li>
+				<li class="active">Edit User Details</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+
+			<h1 class="page-header custom_color">
+				EDIT USER DETAILS
+				<!-- <small>header small text goes here...</small> -->
+			</h1>
+			<!-- end page-header -->
+			<!-- begin table -->
+			<hr />
+			<!--header ends-->
+			<div class="panel panel-inverse" data-sortable-id="form-validation-2"
+				 >
+				<div class="panel-heading">
+					<div class="panel-heading-btn">
+						<a href="javascript:;"
+							class="btn btn-xs btn-icon btn-circle btn-default"
+							data-click="panel-expand"><i class="fa fa-expand"></i></a>
+
+					</div>
+					<h4 class="panel-title">Edit User Details</h4>
+				</div>
+				<div class="panel-body panel-form">
+					<form class="form-horizontal form-bordered"
+						data-parsley-validate="true" novalidate=""  ng-submit="onUpdateUser()" role="form" method="post" >
+						<div class="form-group">
+							<label class="control-label col-md-4 col-sm-4" for="username">UserName*
+								:</label>
+							<div class="col-md-6 col-sm-6">
+								<input class="form-control " type="text" id="UserName"
+									name="UserName" ng-model="user.username" data-type="alphanum"
+									placeholder="FirstName" data-parsley-required="true"
+									data-parsley-id="3526" autofocus >
+								<ul class="parsley-errors-list filled" id="parsley-id-3526">
+									<li class="parsley-required"></li>
+								</ul>
+								<ul class="parsley-errors-list filled">
+								</ul>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-4 col-sm-4">Password*
+								:</label>
+							<div class="col-md-6 col-sm-6">
+								<input class="form-control " type="password" id="Password"
+									name="Password" ng-model="user.password" data-type="alphanum"
+									placeholder="Password" data-parsley-required="true"
+									data-parsley-id="3526">
+								<ul class="parsley-errors-list filled" id="parsley-id-3526">
+									<li class="parsley-required"></li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-4 col-sm-4">Confim
+								Password* :</label>
+							<div class="col-md-6 col-sm-6">
+								<input class="form-control " type="password" id="alphanum"
+									name="alphanum" data-type="alphanum" ng-model="user.password"
+									placeholder="Confirm Password" data-parsley-required="true"
+									data-parsley-id="3526">
+								<ul class="parsley-errors-list filled" id="parsley-id-3526">
+									<li class="parsley-required"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-4 col-sm-4">Email* :</label>
+							<div class="col-md-6 col-sm-6">
+								<input class="form-control " type="email" id="Email"
+									name="Email" ng-model="user.email" data-type="alphanum"
+									placeholder="Email" data-parsley-required="true"
+									data-parsley-id="3526" autofocus>
+								<ul class="parsley-errors-list filled" id="parsley-id-3526">
+									<li class="parsley-required"></li>
+								</ul>
+
+							</div>
+						</div>
+						<!-- <div class="form-group">
+							<label class="control-label col-md-4 col-sm-4">Contact
+								Number* :</label>
+							<div class="col-md-6 col-sm-6">
+								<input class="form-control " type="text" id="alphanum"
+									name="alphanum" data-type="alphanum"
+									placeholder="Contact Number" data-parsley-required="true"
+									data-parsley-id="3526">
+								<ul class="parsley-errors-list filled" id="parsley-id-3526">
+									<li class="parsley-required"></li>
+								</ul>
+							</div>
+						</div> -->
+						<div class="form-group">
+							<label class="control-label col-md-4 col-sm-4"></label>
+							<div class="col-md-6 col-sm-6">
+								<button type="submit" class="btn btn-primary">Submit</button>
+								<a class="btn btn-danger"
+									href="/user">Cancel</a>
+									<div ng-show="error" class="alert alert-danger">{{error}}</div>
+									
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- end #content -->
+
+		

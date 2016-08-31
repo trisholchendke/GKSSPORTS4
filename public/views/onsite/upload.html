@@ -1,0 +1,105 @@
+
+<!-- begin #content -->
+<div id="content" class="content"
+	ng-controller="OnUploadVideoController">
+	<!-- begin breadcrumb -->
+	<ol class="breadcrumb pull-right">
+		<li><a href="dashboard.html">Home</a></li>
+		<li class="active">Upload Video</li>
+	</ol>
+	<!-- end breadcrumb -->
+	<!-- begin page-header -->
+
+	<h1 class="page-header custom_color">
+		Upload Video
+		<!-- <small>header small text goes here...</small> -->
+	</h1>
+	<!-- end page-header -->
+	<!-- begin table -->
+	<hr />
+	<!--header ends-->
+	<div class="panel panel-inverse" data-sortable-id="form-validation-2">
+		<!--  <div class="panel-heading">
+                           
+                            <h4 class="panel-title">Please fill all the onsite user details</h4>
+                        </div> -->
+		<div class="panel-body panel-form">
+			<form class="form-horizontal form-bordered" name="userForm"  role="form" name='form' method="post" novalidate >
+				<div class="form-group"
+					ng-class="{ 'has-error' : userForm.VIdeoTitle.$invalid && !userForm.VIdeoTitle.$pristine }">
+					<label class="control-label col-md-4 col-sm-4" for="VIdeoTitle">VIdeo
+						Title* :</label>
+					<div class="col-md-6 col-sm-6">
+						<input class="form-control" type="text" id="VIdeoTitle"
+							name="VIdeoTitle" ng-model="user.onsite_title"
+							data-type="alphanum" placeholder="VIdeoTitle" autofocus required>
+						<p class="help-block">Video Title is required.</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4 col-sm-4" for="Description">Description
+						:</label>
+					<div class="col-md-6 col-sm-6">
+						<textarea class="form-control" ng-model="user.onsite_desciption"
+							id="Description" name="Description" placeholder="Description"
+							rows="5" required></textarea>
+						<p
+							ng-show="userForm.Description.$invalid && !userForm.Description.$pristine"
+							class="help-block">Description is required.</p>
+					</div>
+
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-md-4 col-sm-4" for="Tags">Upload
+						Video* :</label>
+					<div class="col-md-6 col-sm-6">
+
+						<input id="file-4" type="file"
+							ng-model="user.onsite_video" name="uploadvideo" class="file"
+							 custom-on-change="onVideoFileChosen"> 
+							<br />
+							<progress id="pro" value="0" ng-model="prog" max="100"></progress>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-md-4 col-sm-4" for="Tags">Upload
+						Supported Document* :</label>
+					<div class="col-md-6 col-sm-6">
+						<div class="form-group">
+							<input id="file-4" type="file"
+								ng-model="user.onsite_document" class="file" data-upload-url="#">
+						</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-md-4 col-sm-4"></label>
+					<div class="col-md-6 col-sm-6">
+						<a><button type="button"
+								class="btn btn-primary" ng-click="StartUpload()">Add</button></a> 
+								<a class="btn btn-danger"
+							onclick="">Cancel</a>
+							<div ng-show="error" class="alert alert-danger">{{error}}</div>
+							
+					</div>
+				</div>
+				<!-- <div id="UploadBox">
+					<span id='UploadArea'> <label for="FileBox">Choose A
+							File: </label><input type="file" id="FileBox"
+						custom-on-change="onVideoFileChosen"><br> <label
+						for="NameBox">Name: </label><input type="text" id="NameBox"
+						ng-model="namebox"><br>
+						<button type='button' id='UploadButton' class='Button'>Upload</button>
+					</span>
+				</div> -->
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- end #content -->
+

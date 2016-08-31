@@ -1,0 +1,70 @@
+<!-- begin #content -->
+		<div id="content" class="content" ng-controller="AdminAddNewUserController" ng-init="onGetUser()">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="/user">User Management</a></li>
+				<li class="active">User Details</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			
+			<h1 class="page-header custom_color">USER DETAILS <!-- <small>header small text goes here...</small> --></h1>
+			<!-- end page-header -->
+			<!-- begin table -->
+         <hr/>
+		<!--header ends-->
+		
+			<!-- begin panel -->
+			<div class="panel panel-inverse">
+			    <div class="panel-heading">
+			        <div class="panel-heading-btn">
+			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			            
+			        </div>
+			        <h4 class="panel-title">User Details</h4>
+			    </div>
+			    <div class="panel-body">
+			       
+			        <div class="table-responsive">
+                        <table id="user" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Field Name</th>     
+                                    <th>Field Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   <td>UserName</td>                                    
+                                    <td><span class="text-muted" ng-model="user.username" >{{user.username}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td><span class="text-muted" ng-model="user.password">•••••••••</span></td>
+                                </tr>
+                                <tr>
+                                   <td>Email</td>
+                                    <td><span class="text-muted" ng-model="user.email">{{user.email}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Role</td>                            
+                                    <td><span class="text-muted" ng-model="user.role"><strong>{{user.role}}</span></td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                    </div>
+                   
+			    </div>
+			</div>
+			<!-- end panel -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		<!-- end #content -->

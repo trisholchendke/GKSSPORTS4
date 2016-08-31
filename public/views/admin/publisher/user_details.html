@@ -1,0 +1,128 @@
+<!-- begin #content -->
+		<div id="content" class="content" ng-controller="AdminPublisherController" ng-init="onGetUser()">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="publisher_management.html">Publisher Management</a></li>
+				<li class="active">Publisher Details</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			
+			<h1 class="page-header custom_color">Publisher Details <!-- <small>header small text goes here...</small> --></h1>
+			<!-- end page-header -->
+			<!-- begin table -->
+         <hr/>
+		<!--header ends-->
+			<!-- begin panel -->
+			<div class="panel panel-inverse">
+			    <div class="panel-heading">
+			        <div class="panel-heading-btn">
+			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			        </div>
+			        <h4 class="panel-title">Publisher User Details</h4>
+			    </div>
+			    <div class="panel-body">
+			       
+			        <div class="table-responsive">
+                        <table id="user" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Field Name</th>     
+                                    <th>Field Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   <td>Organization Name</td>                                    
+                                    <td><span class="text-muted" ng-model="publisher.organization">{{publisher.organization}} </span></td>
+                                </tr>
+                                <tr>
+                                    <td>Person In Charge</td>
+                                    <td><span class="text-muted" ng-model="publisher.incharge">{{publisher.incharge}}</span></td>
+                                </tr>
+                               
+                                <tr>
+                                    <td>Designation</td>                            
+                                    <td><span class="text-muted" ng-model="publisher.designation">{{publisher.designation}}</span></td>
+                                </tr> 
+								<tr>
+                                    <td>Email</td>                            
+                                    <td><span class="text-muted" ng-model="publisher.email">{{publisher.email}}</span></td>
+                                </tr> 
+								 
+								<tr>
+                                    <td>Contact Number</td>                            
+                                    <td><span class="text-muted" ng-model="publisher.contact">{{publisher.contact}}</span></td>
+                                </tr> 
+								 <tr>
+                                   <td>Contract Number</td>
+                                    <td><span class="text-muted" ng-model="publisher.contract">{{publisher.contract}}</span></td>
+                                </tr>
+								 <tr>
+                                   <td>Contract Type</td>
+                                    <td><span class="text-muted" ng-model="publisher.contractype">{{publisher.contractype}}</span></td>
+                                </tr>
+								 <tr>
+                                   <td>Total No. Of Users</td>
+                                    <td><span class="text-muted">9</span></td>
+                                </tr>
+								 
+                            </tbody>
+                        </table>
+                    </div>
+                   
+			    </div>
+						<!-- begin panel -->
+			<div class="panel panel-inverse">
+			    
+			      
+			        <h4 class="panel-title table_header">User Details</h4>
+			  
+			    <div class="panel-body">
+			       
+			        <div class="table-responsive">
+                        <table id="user" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>     
+                                    <th>Email Id</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   <td>Jack Lee</td>                                    
+                                    <td><span class="text-muted">jacklee@gmail.com</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Tom Cruise</td>
+                                    <td><span class="text-muted">tomcruise@gmail.com</span></td>
+                                </tr>
+                               
+                                <tr>
+                                    <td>Akshay Jagtap</td>                            
+                                    <td><span class="text-muted">akshayjagtap@gmail.com</span></td>
+                                </tr> 
+								<tr>
+                                    <td>Abhijit Pawar</td>                            
+                                    <td><span class="text-muted">abhijitpawar@gmail.com</span></td>
+                                </tr> 
+								<tr>
+                                    <td>Mahesh Jagtap</td>                            
+                                    <td><span class="text-muted">maheshjagtap@gmail.com</span></td>
+                                </tr> 							
+                            </tbody>
+                        </table>
+                    </div>
+                   
+			    </div>
+			</div>
+			<!-- end panel -->
+			</div>
+			<!-- end panel -->
+			
+			
+	
+		</div>
+		<!-- end #content -->
+		
+		

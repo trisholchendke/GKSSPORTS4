@@ -1,0 +1,89 @@
+
+
+<!-- begin #content -->
+<div id="content" class="content" ng-controller="OnSiteUserController" ng-init="onGetRecentUploadVideo()">
+	<!-- begin breadcrumb -->
+	<ol class="breadcrumb pull-right">
+		<li><a href="/dashboard">Home</a></li>
+		<li class="active">Dashboard</li>
+	</ol>
+	<!-- end breadcrumb -->
+	<!-- begin page-header -->
+	<h1 class="page-header custom_color">
+		Dashboard
+		<!-- <small>header small text goes here...</small> -->
+	</h1>
+	<!-- end page-header -->
+	<hr />
+	<!-- begin row -->
+	<div class="row">
+
+
+		<!-- begin col-3 -->
+		<div class="col-md-3 col-sm-3">
+			<div class="widget widget-stats bg-purple">
+				<div class="stats-icon">
+					<i class="fa fa-video-camera"></i>
+				</div>
+				<div class="stats-info">
+					<h4>TOTAL VIDEOS UPLOADED</h4>
+					<p ng-model="totalUploadCount">{{totalUploadCount}}</p>
+				</div>
+				<div class="stats-link">
+					<a href="uploaded_video_View_details.html">View Detail <i
+						class="fa fa-arrow-circle-o-right"></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- end col-3 -->
+
+
+	</div>
+
+	<hr />
+	<!-- end row -->
+	<!--panel for recently added videos starts-->
+	<div class="panel panel-inverse clearfix"
+		data-sortable-id="table-basic-5">
+		<div class="panel-heading">
+			<div class="panel-heading-btn">
+				<a href="javascript:;"
+					class="btn btn-xs btn-icon btn-circle btn-default"
+					data-click="panel-expand"><i class="fa fa-expand"></i></a>
+
+			</div>
+			<h4 class="panel-title">Recently Added Videos</h4>
+		</div>
+		<!--Recently Added Videos-->
+		<div class="row">
+			<div id="gallery1" class="gallery" ng-repeat="user in userVideo | orderBy:'onsite_datetime':true">
+
+				<div class="image gallery-group-1 pull-left">
+					<div class="image-inner">
+						<a data-lightbox="gallery-group-1"> <video width="200"
+								height="195" controls ng-model="user.onsite_video">
+								<source src="{{user.onsite_video}}">
+
+							</video>
+						</a>
+					</div>
+					<div class="image-info">
+						<h5 class="title" ng-model="user.onsite_title">{{user.onsite_title}}</h5>
+						
+							<h5 class="title inline">
+								<a href="{{user.onsite_video}}" download
+									class="text-center right_icon"><i
+									class="fa fa-download custom_icon" data-toggle="tooltip"
+									title="Download  Video" aria-hidden="true"></i></a>
+							</h5>
+							<div class="desc" ng-model="user.onsite_desciption">{{user.onsite_desciption}}</div>
+							
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	</div>
+	<!-- end #content -->

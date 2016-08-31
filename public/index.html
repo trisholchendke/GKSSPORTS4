@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="login" >
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+  <script src="./assets/js/jquery-3.1.0.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/dist/style.css">
+  <link rel="stylesheet" href="./assets/css/custom_style.css">
+  <script src="./assets/dist/login.js"></script>
+  <link rel="icon" type="image/gif/png" href="./assets/images/admin1.png">
+
+<!-- Anguler JS -->
+
+<script src="./assets/js/angular.min.js"></script>
+<script src="./assets/js/angular-resource.min.js"></script>
+<script src="./assets/js/angular-animate.min.js"></script>
+<script src="./assets/js/ngProgress.min.js"></script>
+<script src="./assets/js/toaster.js"></script>
+<script src="app/app.js"></script>
+<script src="controller/admin/Authentication.js"></script>
+<!-- end Angular JS -->
+</head>
+<body>
+  <div class="container" ng-controller="loginController" >
+  
+  
+   
+  
+  
+      <div class="row">
+	  <img src="./assets/img/logo_logo.png" class="logo"/>
+          <div class="card card-container">
+
+           
+              <img id="profile-img" class="profile-img-card" src="./assets/images/admin.jpg" />
+
+              <p id="profile-name" class="profile-name-card"></p>
+              
+              
+            
+            <form name="form" ng-submit="login()"role="form" ng-init="username='a' ; password='a'">
+
+              <div class="form-group" style="margin-top:-24%">
+                                                <div ng-show="error" class="alert alert-danger">{{error}}</div>
+              
+                  <div class="input-group input-group-md">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <div class="icon-addon addon-md">
+                          <input type="text" placeholder="Username" class="form-control" id="username" name="username" ng-model="username">{{username}}
+
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="input-group input-group-md">
+                      <span class="input-group-addon back" ><i class="glyphicon glyphicon-lock"></i></span>
+                      <div class="icon-addon addon-md">
+        <input type="password" name="password" id="password" class="form-control" ng-model="password" placeholder="Password" required />{{password}}
+
+                      </div>
+                  </div>
+              </div>
+
+              <!-- <input type="password" id="inputPassword" class="form-control" placeholder="Password" required> -->
+              <a href="index.html" class="signin_btn_link"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" 
+              ng-disabled="form.$invalid" class="btn btn-danger" style="font-size: 20px; font-weight: 900;"> Sign in &nbsp; <i class="glyphicon glyphicon-menu-right"></i> </button></a>
+			  
+</form>
+              
+          </div><!-- /card-container
+
+         
+      
+    </div><!-- /container -->
+     </div>
+  </body>
+</html>

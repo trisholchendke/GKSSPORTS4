@@ -1,0 +1,132 @@
+<!-- begin #content -->
+		<div id="content" class="content" ng-controller="AdminPublisherController" ng-init="onGetUser()">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li><a href="publisher_management.html" class="custom_color">Publisher Management</a></li>
+				<li class="active">Edit Publisher Details</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			
+			<h1 class="page-header custom_color">Edit PUBLISHER DETAILS <!-- <small>header small text goes here...</small> --></h1>
+			<!-- end page-header -->
+			<!-- begin table -->
+         <hr/>
+		<!--header ends-->
+			<div class="panel panel-inverse" data-sortable-id="form-validation-2" >
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                
+                            </div>
+                            <h4 class="panel-title">Edit Publisher Details</h4>
+                        </div>
+                        <div class="panel-body panel-form">
+                            <form class="form-horizontal form-bordered" data-parsley-validate="true" novalidate="" ng-submit="onUpdateUser()",role="form" method="post">
+							<div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="FirstName">UserName* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="text" id="UserName" name="UserName" data-type="alphanum" placeholder="UserName" data-parsley-required="true" data-parsley-id="3526" autofocus ng-model="publisher.username"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+						    </div>
+							
+							<div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="Password">Password* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="password" id="Password" name="Password" ng-model="publisher.password" data-type="alphanum" placeholder="Password" data-parsley-required="true" data-parsley-id="3526"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="ConfirmPassword">Confim Password* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="Password" id="ConfirmPassword" name="ConfirmPassword" ng-model="publisher.password" data-type="alphanum" placeholder="Confirm Password" data-parsley-required="true" data-parsley-id="3526"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>
+								
+							    <div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="organizationname">Organization Name* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="text" id="organizationname" name="organizationname" ng-model="publisher.organization"  data-type="alphanum" placeholder="Organization Name" data-parsley-required="true" data-parsley-id="3526"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>	
+                                
+								 <div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="personincharge">Person In Charge* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="text" id="personincharge" name="personincharge" ng-model="publisher.incharge" data-type="alphanum" placeholder="Person In Charge" data-parsley-required="true" data-parsley-id="3526"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>	
+								
+								<div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="designation">Designation* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="text" id="designation" name="designation"  ng-model="publisher.designation" data-type="alphanum" placeholder="Designation" data-parsley-required="true" data-parsley-id="3526"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>
+								
+                                <div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="Email">Email* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="email" id="Email" name="Email"  ng-model="publisher.email" data-type="alphanum" placeholder="Email" data-parsley-required="true" data-parsley-id="3526" autofocus><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>	
+								
+								<div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="contactnumber">Contact Number* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="text" id="contactnumber" name="contactnumber"  ng-model="publisher.contact" data-type="alphanum" placeholder="Contact Number" data-parsley-required="true" data-parsley-id="3526"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label class="control-label col-md-4 col-sm-4" for="contractnumber">Contract Number* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="text" id="contractnumber" name="contractnumber" ng-model="publisher.contract" data-type="alphanum" placeholder="Contract Number" data-parsley-required="true" data-parsley-id="3526"><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									</div>
+								</div>
+								
+								<div class="form-group">
+								<label class="control-label col-md-4 col-sm-4" for="contracttype">Contract Type* :</label>
+								<div class="col-md-6 col-sm-6">
+								<select class="form-control" id="contracttype" name="contracttype" data-parsley-required="true" ng-model="publisher.contractype">
+								<option value="">Please Choose</option>
+								<option value="EventWise">Event Wise</option>
+								<option value="Long Term">Long Term</option>
+								</select>
+								<br/>
+								
+								</div>
+								</div>
+								<div class="form-group" id="EventCode">
+									<label class="control-label col-md-4 col-sm-4" for="FirstName">Event Code* :</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control " type="text" id="EventCode" name="EventCode" ng-model="publisher.eventcode" data-type="alphanum" placeholder="Event Code" data-parsley-required="true" data-parsley-id="3526" ><ul class="parsley-errors-list filled" id="parsley-id-3526"><li class="parsley-required"></li></ul>
+									
+									</div>
+						        </div>
+								<div class="form-group">
+                                    <label class="col-md-4 control-label">Duration*</label>
+                                    <div class="col-md-6">
+                                        <div class="input-group input-daterange">
+                                            <input type="text" class="form-control" name="start" placeholder="Date Start" ng-model="publisher.fromdate">
+                                            <span class="input-group-addon">to</span>
+                                            <input type="text" class="form-control" name="end" placeholder="Date End" ng-model="publisher.todate">
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<div class="form-group" >
+									<label class="control-label col-md-4 col-sm-4"></label>
+									<div class="col-md-6 col-sm-6">
+										<button type="submit" class="btn btn-primary">Submit</button>
+											<a class="btn btn-danger" href='/publisher'>Cancel</a>
+											<div ng-show="error" class="alert alert-danger">{{error}}</div>
+									</div>
+								</div>
+								
+                            </form>
+                        </div>
+                    </div>
+		</div>
+		<!-- end #content -->
